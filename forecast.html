@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+        <title>天気予報</title>
+        <link rel="stylesheet" href="forecast.css">
+    </head>
+    <body>
+        <div class="big-container">
+
+            <div id="container">
+                <form id="getcity">
+                    <h1>天気予報</h1>
+                    <div id="input-group">
+                        <label for="inputCity-label">都市名を入力してください</label>
+                        <input type="text" id="inputCity" name="city">
+                        <span class="error-message" id="username-error"></span>
+                    </div>
+                    <button type="submit" class="submit-btn">天気予報を見る</button>
+                </form>
+                <div id="result"></div>
+            </div>
+            <div id="forecast-choices">
+                <h2>天気予報を表示できる地域</h2>
+                <p>釧路
+                    旭川
+                    札幌
+                    青森
+                    秋田
+                    仙台
+                    新潟
+                    金沢
+                    東京
+                    宇都宮
+                    長野
+                    名古屋
+                    大阪
+                    高松
+                    松江
+                    広島
+                    高知
+                    福岡
+                    鹿児島
+                    奄美
+                    那覇
+                    石垣
+                    </p>
+            </div>
+            <div>
+                <p>By クジラWebAPI</p>
+            </div>
+        </div>
+        <script src="lesson1.js"></script>
+    </body>
+    
+</html>

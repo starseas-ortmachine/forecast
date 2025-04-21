@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif; /* 近未来的なフォント */
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
+}
+
+#container {
+
+    background: rgba(20, 20, 40, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+#forecast-choices {
+    background: rgba(20, 20, 40, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+    
+}
+
+#container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+}
+
+#forecast-choices:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+}
+
+
+h1 {
+    color: #00ffcc;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color:#00ffcc;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    color:aqua;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+
+#input-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+label {
+    color: #ffffff;
+    font-size: 0.9rem;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    transition: all 0.3s ease;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00ffcc;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff0077;
+    box-shadow: 0 0 10px #ff0077, 0 0 20px #ff0077;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+input::placeholder {
+    color: #cccccc;
+    opacity: 0.7;
+}
+
+.error-message {
+    color: #ff5555;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: -18px;
+    left: 10px;
+    display: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #00ffcc, #ff0077);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(255, 0, 119, 0.7);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+#result {
+    font-family: 'Obitron', sans-serif;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+    animation: fadeIn 1s ease-in;
+}
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 500px) {
+    .big-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
