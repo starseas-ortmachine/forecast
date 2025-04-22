@@ -43,8 +43,14 @@ async function getForecast(city) {
         const data = await response.json();
 
         const date = data[targetCity].map(obj => obj.date);
-        const forecast = data[targetCity].map(obj => obj.forecast); 
-        cityForecast = "\n" + city + "の天気予報<br>";
+        const forecast = data[targetCity].map(obj => obj.forecast);
+        if (targetCity) {
+            cityForecast = "\n" + city + "の天気予報<br>";
+            
+        } else {
+            cityForecast = "都市名が見つかりませんでした。";
+        }
+
         for (i=0; i<forecast.length; i++) {
             cityForecast = cityForecast + date[i] + "の天気は" + 
                             forecast[i] + "と予想されます。\n";
