@@ -1,2 +1,2 @@
 # forecast
-Forecast by API
+Forecast by クジラWeb API
